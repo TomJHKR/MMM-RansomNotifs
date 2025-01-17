@@ -53,7 +53,7 @@ Module.register("MMM-RansomNotifs", {
 				wrapper.className = this.config.tableClass;
 
 				for (const key in payload) {
-					payload[key].slice(0, 10).forEach((item, index) => {
+					payload[key].slice(0, this.config.maximumEntries).forEach((item, index) => {
 					const ransomRow = document.createElement("tr");
 					ransomRow.className = "event-wrapper normal event";
 
