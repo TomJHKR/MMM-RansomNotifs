@@ -7,6 +7,7 @@ Module.register("MMM-RansomNotifs", {
 		tableClass: "small",
 		displayFlag: true,
 		refreshTime: 300000,
+		useColor: true,
 	},
 
   /**
@@ -62,6 +63,9 @@ Module.register("MMM-RansomNotifs", {
 						flagWrapper.className = `symbol align-right`;
 						const flag = document.createElement("span");
 						flag.className = `fi fi-${item.country.toLowerCase()}`;
+						if (!this.config.useColor) {
+							flag.style.filter = "grayscale(1)";
+						}
 						flagWrapper.appendChild(flag);
 					}
 					ransomRow.appendChild(flagWrapper);
