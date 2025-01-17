@@ -2,7 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/00da42cf-60c7-4c6b-852b-c2c13427b445)
 
-[Module description]
+This modules is used for tracking ransomware attacks from the Ransomware.Live website
 
 ## Installation
 You will need to install [Flag-Icons](https://www.npmjs.com/package/flag-icons?activeTab=readme)
@@ -36,14 +36,19 @@ To use this module, add it to the modules array in the `config/config.js` file:
 ```
 
 Or you could use all the options:
-Coming Soon
 
 ```js
     {
         module: 'MMM-RansomNotifs',
         position: 'Bottom_left',
         config: {
-
+            maximumEntries: 10, // Amount of attacks to display
+            fade: true, // fade the entries out or not
+            fadePoint: 0.25, // fade point
+            tableClass: "small",
+            displayFlag: true, // Display flag icons or not
+            refreshTime: 300000, // Time to refresh the data in milliseconds
+            useColor: true, // display colors, else will be grayscaled
         }
     },
 ```
